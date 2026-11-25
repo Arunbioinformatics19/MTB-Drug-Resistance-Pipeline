@@ -1,0 +1,35 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##bcftoolsVersion=1.25+htslib-1.24
+##bcftoolsCommand=mpileup -Ou -f reference/tb_h37rv_ref.fasta alignment/TB_patient_1_sorted.bam
+##reference=file://reference/tb_h37rv_ref.fasta
+##contig=<ID=NC_000962.3,length=4411532>
+##ALT=<ID=*,Description="Represents allele(s) other than observed.">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=IDV,Number=1,Type=Integer,Description="Maximum number of raw reads supporting an indel">
+##INFO=<ID=IMF,Number=1,Type=Float,Description="Maximum fraction of raw reads supporting an indel">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias for filtering splice-site artefacts in RNA-seq data (bigger is better)",Version="3">
+##INFO=<ID=RPBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Read Position Bias (closer to 0 is better)">
+##INFO=<ID=MQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality Bias (closer to 0 is better)">
+##INFO=<ID=BQBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Base Quality Bias (closer to 0 is better)">
+##INFO=<ID=MQSBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Mapping Quality vs Strand Bias (closer to 0 is better)">
+##INFO=<ID=SCBZ,Number=1,Type=Float,Description="Mann-Whitney U-z test of Soft-Clip Length Bias (closer to 0 is better)">
+##INFO=<ID=SGB,Number=1,Type=Float,Description="Segregation based metric, http://samtools.github.io/bcftools/rd-SegBias.pdf">
+##INFO=<ID=MQ0F,Number=1,Type=Float,Description="Fraction of MQ0 reads (smaller is better)">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths (high-quality bases)">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="Number of high-quality ref-forward , ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="Average mapping quality">
+##bcftools_callVersion=1.25+htslib-1.24
+##bcftools_callCommand=call -mv -Ov -o variants/TB_patient_1_variants.vcf; Date=Wed Nov 25 06:47:06 2026
+##SnpEffVersion="5.4c (build 2026-02-23 07:25), by Pablo Cingolani"
+##SnpEffCmd="SnpEff  Mycobacterium_tuberculosis_h37rv "
+##INFO=<ID=ANN,Number=.,Type=String,Description="Functional annotations: 'Allele | Annotation | Annotation_Impact | Gene_Name | Gene_ID | Feature_Type | Feature_ID | Transcript_BioType | Rank | HGVS.c | HGVS.p | cDNA.pos / cDNA.length | CDS.pos / CDS.length | AA.pos / AA.length | Distance | ERRORS / WARNINGS / INFO' ">
+##INFO=<ID=LOF,Number=.,Type=String,Description="Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+##INFO=<ID=NMD,Number=.,Type=String,Description="Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	alignment/TB_patient_1_sorted.bam
+Chromosome	761155	.	C	T	225.417	.	DP=250;VDB=0.00642287;SGB=-0.693147;MQ0F=0;AC=2;AN=2;DP4=0,0,250,0;MQ=60;ANN=T|missense_variant|MODERATE|rpoB|Rv0667|transcript|CCP43410|protein_coding|1/1|c.1349C>T|p.Ser450Leu|1349/3519|1349/3519|450/1172||,T|upstream_gene_variant|MODIFIER|rpoC|Rv0668|transcript|CCP43411|protein_coding||c.-2215C>T|||||2215|WARNING_TRANSCRIPT_NO_START_CODON,T|downstream_gene_variant|MODIFIER|atsD|Rv0663|transcript|CCP43406|protein_coding||c.*2655C>T|||||2655|,T|downstream_gene_variant|MODIFIER|vapB8|Rv0664|transcript|CCP43407|protein_coding||c.*2351C>T|||||2351|,T|downstream_gene_variant|MODIFIER|vapC8|Rv0665|transcript|CCP43408|protein_coding||c.*2016C>T|||||2016|WARNING_TRANSCRIPT_NO_START_CODON,T|downstream_gene_variant|MODIFIER|Rv0666|Rv0666|transcript|CCP43409|protein_coding||c.*1846C>T|||||1846|WARNING_TRANSCRIPT_NO_START_CODON	GT:PL:AD	1/1:255,255,0:0,250
